@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral() // JCenter telah dihapus
+    }
+    dependencies {
+        // Versi yang sesuai untuk Android Studio 3.6
+        classpath 'com.android.tools.build:gradle:3.6.3'
+
+        // Hapus semua dependency Kotlin jika proyek ini murni Java
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        // Tambahkan baris di bawah ini untuk bypass SSL
+        maven { url "http://repo.maven.apache.org/maven2/"; allowInsecureProtocol = true }
+        maven { url "http://dl.google.com/dl/android/maven2/"; allowInsecureProtocol = true }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

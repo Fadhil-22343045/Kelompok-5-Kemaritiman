@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".ProfilActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_profil"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0A4D7D"
+        app:title="Profil Pengguna"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_back_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_person_circle"
+                android:tint="#2D72AA"
+                android:layout_marginBottom="16dp"
+                tools:ignore="ContentDescription" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nama Pengguna" android:textSize="14sp" android:textColor="#666666"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ahmad Nelayan Sejati" android:textSize="20sp" android:textStyle="bold" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Domisili" android:textSize="14sp" android:textColor="#666666"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tanjung Priok, Jakarta Utara" android:textSize="18sp" android:layout_marginBottom="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Frekuensi Melaut" android:textSize="14sp" android:textColor="#666666"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15 Kali/Bulan" android:textSize="18sp" android:layout_marginBottom="16dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginVertical="16dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Riwayat Rute Melaut" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lihat 15 riwayat pelayaran terakhir >" android:textSize="16sp" android:textColor="#2D72AA" android:layout_marginBottom="24dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pengaturan Notifikasi" android:textSize="18sp" android:textStyle="bold"/>
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peringatan Gelombang Tinggi Otomatis"
+                android:checked="true"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
